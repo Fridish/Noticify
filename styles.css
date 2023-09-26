@@ -11,6 +11,7 @@
   }
   body { 
     font-family: 'Poppins', sans-serif;
+    margin: 0px; 
   }
   .mainContainer{
     display: flex;
@@ -21,7 +22,7 @@
 .containerHeader {
     display: flex;
     height: 10vh;
-    width: 99vmax;
+    width: 100%;
     color:var(--font-color);
     flex-direction: row;
     justify-content: space-between;
@@ -29,44 +30,83 @@
 }
 .containerBodyLeft {
     display: flex;
-    width: 50vmax;
-    height: 85vh;
-    gap: 40px;
+    width: 50%;
+    height: 80%;
+    gap: 20px;
     flex-wrap: wrap;
     align-content: center;
-
+    justify-content: center;
 }
 .containerBodyRight {
-    max-width: 40vmax;
-    height: 85vh;
+    display: flex;
+    max-width: 40%;
+    height: 100%;
     flex-wrap: wrap;
 }
 .info-Box {
+
+    /* width: calc() totala bredden på contaionern minus padding typ*/
+    display: flex; 
     position: relative;
-    background-color: #fbfbfb;
-    width: 45vh;
-    height: 35vh;
+    background-color: var(--bg-gray);
+    width: 280px;
+    height: 280px;
+    flex-direction: column;
     box-shadow: 3px 4px 8px #c4c4c4;
     border-radius: 5%;
+    justify-content: center;
+    padding-left: 25px;
+    gap: 20px;
+}
+.redBoxArrow{
+    display: flex;
+    height: 40px;
+    width: 40px; 
+    background-color: var(--red);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 15px 0px;
+    right: 0;
+    bottom: 0;
+}
+.tags {
+    display: flex;
+    margin: 0px;
+    gap: 10px;
+}
+.tag{
+    height: 30px;
+    width: 70px;
+    background-color: var(--font-color);
+    border-radius: 5px;
 }
 .info-Box > h3 {
-    font-size: 36;
+     border: none;
+    font-size: 36px;
     font-weight: bold;
+    line-height: 95%;
+    padding: 0px; 
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 .info-Box > p {
-    font-size: 16;
+    font-size: 16px;
+    max-width: 90%;
 }
 .containerBodyRight > h1 {
     font-size: 60px;
+    margin-left: 50px;
 }
 .containerBodyRight > p {
     max-width: 65vh;
     font-size: 24px;
+    margin-left: 50px;
 }
 .containerHeader > h2 {
     font-size: 36px;
     font-weight: bold;
-    color: #fa6262;
+    color: var(--red);
 }
 .containerHeader > div > h3 {
     word-spacing: 30px;
@@ -82,15 +122,43 @@
     border-radius:20px;
     display: flex;
     position: relative;
+    align-items: center;
+    font-size: 16px;
+    margin-left: 50px;
+}
+.bodyButton > p {
+    margin-left: 40px;
+     
 }
 #buttonBlue {
-    background-color: var(--blue-solid);
+    background-color: var(--blue);
 }
 #buttonGreen {
-    background-color:var(--green-solid);
+    background-color:var(--green);
 }
 .buttonBodyRight {
+    display: flex;
     width: 50px;
     height: 50px;
-    background-color: green;
+    position: absolute;
+    margin-left: 80%;
+    border-radius: 40%;
+    justify-content: center;
+    align-items: center;
+}
+#iconGreen, .jobs, .animals {
+    background-color: var(--green-solid);
+}
+#iconBlue {
+    background-color: var(--blue-solid);
+}
+.icon {
+    width: 144px;
+    height: 81px;
+}
+.gothenburg {
+    background-color: var(--yellow)
+}
+.money {
+    background-color: var(--pink)
 }
